@@ -1,4 +1,3 @@
-// You need to add event listeners to the islands and toggle the "clicked" class.
 const islands = document.querySelectorAll('.island');
 
 islands.forEach(island => {
