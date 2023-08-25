@@ -1,0 +1,104 @@
+/* Basic Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Pacifico;
+  background: linear-gradient(to bottom, #53c3ef, #b0e0e6);
+}
+
+/* Island Sections */
+.island-section {
+  position: relative;
+  height: 100vh;
+  scroll-snap-align: start; /* Enable smooth scrolling */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+.island-text {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  display: none; /* Hide by default */
+  text-align: center;
+}
+
+#island1, #island2 , #island3
+{
+    background-position: center;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 20px;
+    cursor: pointer;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+
+/* Island Hover Effect */
+.island-img:hover {
+  transform: translateY(-10px) rotate(5deg);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  
+}
+
+/* Custom Cursor */
+.island-section{
+  cursor: url("images/cursor.png"), auto;
+}
+
+#island1.clicked {
+  transform: rotateY(180deg);
+}
+
+#island2.clicked {
+  transform: rotateY(180deg);
+}
+
+#island3.clicked {
+  transform: rotateY(180deg);
+}
+/* Seagulls Pseudo-Elements */
+.island-section::before,
+.island-section::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: url("./images/seagull2.webp") no-repeat center;
+  background-size: contain;
+}
+
+.island-section::before {
+  top: 234px;
+  left: 96px;
+}
+
+.island-section::after {
+  bottom: 20px;
+  right: 20px;
+}
+.island.clicked .island-text.show {
+    display: block;
+}
+@media (max-width: 768px) {
+    .island-section {
+      font-size: 1.5rem;
+    }
+    
+    .island-text {
+      font-size: 1rem;
+    }
+    
+    .island {
+      width: 150px;
+      height: 150px;
+      margin: 10px;
+    }
+  }
