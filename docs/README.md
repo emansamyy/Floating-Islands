@@ -22,3 +22,5 @@ Pseudo elements such as `::before` and `::after`  play a significant role. These
 
 A custom cursor that dynamically changes based on the area of the webpage it hovers over. This unique touch adds a personalized and interactive aspect to the user experience
 
+### Hosted at
+https://emansamyy.github.io/Floating-Islands/
